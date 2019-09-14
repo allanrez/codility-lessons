@@ -12,16 +12,17 @@ public class MissingInteger {
 	}
 	
 	public int solution(int[] a) {
+		int min = 1;
 		Arrays.parallelSort(a);
 		if(a[a.length-1] <= 0) {
-			return 1;
+			return min;
 		}
-		for(int i = 1; i< a[a.length-1]; i++) {
-			if(Arrays.binarySearch(a, i) < 0) {
-				return i;
+		for(int i = 0; i < a.length; i++) {
+			if(a[i] == min) {
+				min++;
 			}
 		}
-		return a[a.length-1]+1;
+		return min;
     }
 	
 }
