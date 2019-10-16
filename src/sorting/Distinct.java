@@ -7,7 +7,6 @@ public class Distinct {
 	public static void main(String[] args) {
 		Distinct d = new Distinct();
 		System.out.println(d.solution(new int[] {2,1,1,2,3,1}) == 3);
-//		System.out.println(d.solution(new int[] {-5,5,-5,4}) == 125);
 	}
 	
     public int solution(int[] a) {
